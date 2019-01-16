@@ -124,7 +124,7 @@ export default {
   methods: {
     initWebSocket() {
       //初始化weosocket
-      const host = "ws://platform2.wookitech.com";
+      const host = "ws://platform2.wookitech.com:8083";
       const wsuri = host + "/cameraDicernServer";
       this.websock = new WebSocket(wsuri);
       this.websock.onopen = this.websocketonopen;
