@@ -123,7 +123,7 @@ export default {
   methods: {
     initWebSocket() {
       //初始化weosocket
-      const host = "ws://platform2.wookitech.com";
+      const host = "ws://platform2.wookitech.com:8081";
       const wsuri = host + "/cameraDicernServer";
       this.websock = new WebSocket(wsuri);
       this.websock.onopen = this.websocketonopen;
@@ -182,7 +182,7 @@ export default {
     drawLine(){
       let xData = [];
       let seriesData = [];
-      const host = "http://platform2.wookitech.com";
+      const host = "http://platform2.wookitech.com:8081";
       let that = this;
       let totalNum = 0;
       this.axios.get('/cameraMatchs/dayMatchs').then((response) => {
